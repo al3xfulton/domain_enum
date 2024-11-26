@@ -14,7 +14,11 @@
 ## Domain Basics
 
 ### Domain
-A domain is a structure which organizes network resources and users allowing for application of policy, authentication and sharing of data and resources.
+A domain is a structure which:
+- Organizes network resources and users
+- Allows for application of policy
+- Enables network level authentication
+- Enables sharing of data and resources
 
 ### Active Directory
 Active Directory (AD) is the standard windows directory service implementation which enables:
@@ -25,7 +29,7 @@ Active Directory (AD) is the standard windows directory service implementation w
 Framework drives toward different levels of objects:
 - Domain
 - Tree
-- Fores
+- Forest
 
 ![Domain Heirarchy](https://www.cayosoft.com/wp-content/uploads/2022/09/Active-Directory-Forest_blog.jpg)
 
@@ -40,7 +44,7 @@ Organizational Units (OUs)
 Domain Controllers (DCs) are the servers which implements the Active Directory services in a domain.
 
 A DC implements:
-- Authenticate users and validate their access permissions accross domain joined devices
+- Authenticate users and validate their access permissions across domain joined devices
 - Tracks resources in the network (ie file shares and printers)
 - Push Group Policy to all network connected devices and/or users 
 - Can runadditional network responsibilities
@@ -60,10 +64,14 @@ LDAP is used within AD to have a standard way to communicate
 ## Kerberos
 More secure authentication mechanism that is used to authenticate both the user and service via a Key Distribution Center (KDC) which is often a resource given by the DC.
 
+Authentication mechanism which validates both the user and service
+Validates using a Key Distribution Center often co-located with DC
+
 First implemented in Windows 2000 - replaced NTLM which shifted from Server direct authentication to Third 
 Party (DC/KDC) authentication.
 
-Required port is 88 udp + tcp - other ports can be used for non-essential functions: 749/tcp, 4444/udp/464/udp
+Required port is 88 udp + tcp - ot
+her ports can be used for non-essential functions: 749/tcp, 4444/udp/464/udp
 
 The KDC on allows for users to maintain Ticket Granting Tickets (TGT) during a standard session. When a user wants to access a service it sends a TGT along with the service name, which is then encryped using the Ticket Granting Service (TGS) secret key. The client then sends that session key to the server to allow for authenticaiton.
 
