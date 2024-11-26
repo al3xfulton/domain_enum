@@ -1,12 +1,14 @@
 # Domain Enumeration
 
 ## Desired Learning Objectives
-- Demonstrate the use of LDAP Domain Dump to retrieve information about a domain.
-- Demonstrat the use of LDAP Searches to query and retrieve information about a domain.
-- Describe the role of a Domain in a Windows Environment.
-- Describe the role of LDAP in a Windows Domain.
+- Describe an administrative domain within in a network.
+- Describe the role of LDAP in a Windows domain.
+- Describe Active Directory and its key terms.
 - Describe the relationship between LDAP and Active Directory.
-- Describe an Active Directory and it's key terms.
+- Demonstrate the use of LDAP Searches to query and retrieve information about a domain.
+- Demonstrate the use of LDAPDomainDump to retrieve information about a domain.
+
+
 
 
 ## Domain Basics
